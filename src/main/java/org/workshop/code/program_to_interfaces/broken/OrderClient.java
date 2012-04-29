@@ -5,7 +5,6 @@ import org.workshop.code.program_to_interfaces.broken.services.BillingService;
 public class OrderClient {
 
 	private final BillingService billingService;
-	
 
 	public OrderClient(BillingService billingService) {
 		this.billingService = billingService;
@@ -19,5 +18,4 @@ public class OrderClient {
 		Reference reference = billingService.bill(order.getAccountNumber(), order.getTotalAmount());
 		order.bill(reference);
 	}
-	
 }
